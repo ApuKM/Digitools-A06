@@ -81,11 +81,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-1">
-          <img src={cartIcon} alt="CartIcon" />
-          <a className="btn btn-ghost text-base font-semibold text-[#101727]/90">
+          <img src={cartIcon} alt="CartIcon" className="w-5 h-5"/>
+          <a className="btn btn-ghost text-base font-semibold text-[#101727]/90 hidden md:flex items-center">
             Login
           </a>
-          <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-ful font-semibold text-base text-white rounded-full">
+          <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] font-semibold text-base text-white rounded-full hidden md:flex items-center">
             Get Started
           </a>
         </div>
