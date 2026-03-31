@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ToolCard = ({ data }) => {
+const ToolCard = ({ data, cartItems, setCartItems }) => {
+  const [buyAction, setBuyAction] = useState(false);
   const { name, description, price, period, tag, tagType, features, icon } =
     data;
+    const handleCartItem = (data) => {
+      setCartItems([...cartItems, data])
+      setBuyAction(true)
+    }
   return (
     <div className="hover:-translate-y-1  transition-all duration-200">
       <div className="card bg-base-100 shadow-lg rounded-md">
@@ -47,8 +52,9 @@ const ToolCard = ({ data }) => {
             </ul>
           </div>
           <div className="">
-            <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-sm text-white rounded-full font-semibold w-full">
-              Buy Now
+            <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-sm text-white rounded-full font-semibold w-full"
+            onClick={() =>handleCartItem(data)}>
+              {buyAction ? "Added To Cart" : "Buy Now"}
             </button>
           </div>
         </div>

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import ToolsContainer from "./components/ai tools/ToolsContainer";
 import GetStarted from "./components/GetStarted";
 import Pricing from "./components/Pricing";
+import CartContainer from "./components/cart/CartContainer";
 
 const fetchAiData = async () => {
   const res = await fetch("/data.json");
@@ -16,9 +17,12 @@ const fetchAiData = async () => {
 
 const App = () => {
   const [dataPromise] = useState(() => fetchAiData());
+  const [cartItems, setCartItems] = useState([]);
+  const [tab, setTab] = useState("models");
+  // console.log(cartItems)
   return (
     <>
-      <Navbar />
+      <Navbar cartItems={cartItems} />
       <section id="main">
         <Banner />
         <Statistics />
@@ -29,8 +33,24 @@ const App = () => {
             </div>
           }
         >
-          <ToolsContainer dataPromise={dataPromise} />
+          {tab === "models" && (
+            <ToolsContainer
+              dataPromise={dataPromise}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              tab={tab}
+              setTab={setTab}
+            />
+          )}
         </Suspense>
+        {tab === "cart" && (
+          <CartContainer
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+            tab={tab}
+            setTab={setTab}
+          />
+        )}
         <GetStarted />
         <Pricing />
         <TransformWorkflow />

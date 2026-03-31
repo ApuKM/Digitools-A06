@@ -1,10 +1,10 @@
 import React from "react";
 import cartIcon from "/products/shopping-cart.png";
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
   return (
-    <div className="w-[90%] max-w-7xl mx-auto">
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="sticky top-0 z-50">
+      <div className="navbar bg-base-100 shadow-sm px-10 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -77,8 +77,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end ">
-          <img src={cartIcon} alt="CartIcon" className="w-5 h-5"/>
+        <div className="navbar-end gap-2">
+          <div className="relative cursor-pointer">
+            <img src={cartIcon} alt="CartIcon" className="w-6 h-6" />
+
+            <span className="absolute -top-3 -right-3 bg-purple-600 text-white text-xs font-bold rounded-full min-w-4.5 h-4.5 flex items-center justify-center px-1">
+              {cartItems.length}
+            </span>
+          </div>
           <a className="btn btn-ghost text-base font-semibold text-[#101727]/90 hidden md:flex items-center">
             Login
           </a>
