@@ -1,12 +1,15 @@
 import React from "react";
 
 const ToolCard = ({ data }) => {
-  const { name, description, price, period, tag, features, icon } = data;
+  const { name, description, price, period, tag, tagType, features, icon } =
+    data;
   return (
-    <div>
+    <div className="hover:-translate-y-1  transition-all duration-200">
       <div className="card bg-base-100 shadow-lg rounded-md">
         <div className="card-body space-y-4">
-          <span className="badge badge-xs badge-warning absolute top-0 right-0">
+          <span
+            className={`badge badge-xs ${tagType === "new" ? "bg-blue-200 text-blue-500" : tagType === "popular" ? "bg-orange-200 text-orange-500" : "bg-purple-200 text-purple-500"} absolute top-0 right-0 p-2 `}
+          >
             {tag}
           </span>
           <img src={icon} alt="" className="w-6 h-6" />
