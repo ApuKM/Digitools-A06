@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-      <div className=" pt-10 grid-none">
+      <div className=" pt-10">
         <hr className="border-gray-700 mb-6" />
         <div className="flex flex-col md:flex-row justify-between items-center text-sm opacity-80 gap-4">
           <p>© {new Date().getFullYear()} DigiTools. All rights reserved.</p>

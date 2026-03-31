@@ -1,5 +1,5 @@
 import React from "react";
-import cartIcon from "../assets/products/shopping-cart.png";
+import cartIcon from "/products/shopping-cart.png";
 
 const Navbar = () => {
   return (
