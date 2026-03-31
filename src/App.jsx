@@ -3,6 +3,7 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Statistics from "./components/Statistics";
+import TransformWorkflow from "./components/TransformWorkflow";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <section id="main">
         <Banner />
         <Statistics />
+        <TransformWorkflow />
       </section>
     </>
   );

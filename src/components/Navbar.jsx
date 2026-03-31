@@ -3,7 +3,7 @@ import cartIcon from "../assets/products/shopping-cart.png";
 
 const Navbar = () => {
   return (
-    <div className="w-[80%] max-w-7xl mx-auto">
+    <div className="w-[90%] max-w-7xl mx-auto">
       <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-semibold text-[#101727]/90 text-base gap-1">
             <li>
-              <a>Product</a>
+              <a>Products</a>
             </li>
             <li>
               <details>
@@ -73,14 +73,11 @@ const Navbar = () => {
               <a>Pricing</a>
             </li>
             <li>
-              <a>Testmonials</a>
-            </li>
-            <li>
               <a>FAQ</a>
             </li>
           </ul>
         </div>
-        <div className="navbar-end gap-1">
+        <div className="navbar-end ">
           <img src={cartIcon} alt="CartIcon" className="w-5 h-5"/>
           <a className="btn btn-ghost text-base font-semibold text-[#101727]/90 hidden md:flex items-center">
             Login

@@ -4,7 +4,7 @@ import banner from "../assets/banner.png"
 
 const Banner = () => {
   return (
-    <div className="w-[80%] max-w-7xl mx-auto mt-14 md:mt-20">
+    <div className="w-[90%] max-w-7xl mx-auto mt-14 md:mt-20">
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row-reverse justify-between gap-8 w-full ">
           <img
@@ -20,10 +20,10 @@ const Banner = () => {
                 New: AI-Powered Tools Available
               </span>
             </div>
-            <h1 className="text-6xl font-extrabold leading-20  text-[#101727]/90 my-4">
+            <h1 className="text-6xl font-extrabold leading-18 text-[#101727]/90 my-4">
               Supercharge Your <br /> Digital Workflow
             </h1>
-            <p className="mb-8 text-[#627382] leading-5 text-lg max-w-xl">
+            <p className="my-8 text-[#627382] leading-5 text-lg max-w-xl">
               Access premium AI tools, design assets, templates, and
               productivity software—all in one place. Start creating faster
               today. Explore Products
