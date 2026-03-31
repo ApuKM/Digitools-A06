@@ -11,7 +11,7 @@ const CartContainer = ({ cartItems, setCartItems, tab, setTab }) => {
         <div className="space-y-5">
           <h1 className="text-2xl text-[#101727] font-bold">Your Cart</h1>
           {cartItems.map((cartItem) => (
-            <CartItem key={cartItem.id} cartItem={cartItem} />
+            <CartItem key={cartItem.id} cartItems={cartItems} cartItem={cartItem} setCartItems={setCartItems}/>
           ))}
           <div className="flex items-center justify-between mt-10">
             <h4 className="text-base text-[#627382] font-medium">Total</h4>
