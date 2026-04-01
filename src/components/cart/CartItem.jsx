@@ -1,9 +1,13 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const CartItem = ({ cartItem, setCartItems, cartItems }) => {
   const handleFilteredCards = (cartItem) => {
     const filtered = cartItems.filter((item) => item.id !== cartItem.id);
     setCartItems(filtered);
+    toast(`${cartItem.name} removed from cart!`, {
+      autoClose: 3000,
+    })
   };
   return (
     <div>

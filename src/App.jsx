@@ -9,6 +9,7 @@ import ToolsContainer from "./components/ai tools/ToolsContainer";
 import GetStarted from "./components/GetStarted";
 import Pricing from "./components/Pricing";
 import CartContainer from "./components/cart/CartContainer";
+import { ToastContainer } from "react-toastify";
 
 const fetchAiData = async () => {
   const res = await fetch("/data.json");
@@ -22,7 +23,7 @@ const App = () => {
   // console.log(cartItems)
   return (
     <>
-      <Navbar cartItems={cartItems} />
+      <Navbar cartItems={cartItems} setTab={setTab} />
       <section id="main">
         <Banner />
         <Statistics />
@@ -56,6 +57,7 @@ const App = () => {
         <TransformWorkflow />
       </section>
       <Footer />
+      <ToastContainer />
     </>
   );
 };

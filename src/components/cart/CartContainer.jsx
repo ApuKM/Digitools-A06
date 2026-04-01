@@ -1,9 +1,16 @@
 import React from "react";
 import TabSection from "../TabSection";
 import CartItem from "./CartItem";
+import { toast } from "react-toastify";
 
 const CartContainer = ({ cartItems, setCartItems, tab, setTab }) => {
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+  const handleCheckOut = () => {
+    setCartItems([]);
+    toast("Redirecting to checkout...", {
+      autoClose: 3000,
+    })
+  }
   return (
     <div className="mt-14 md:mt-20 w-[90%] max-w-7xl mx-auto ">
       <div className="flex flex-col gap-10">
@@ -27,7 +34,7 @@ const CartContainer = ({ cartItems, setCartItems, tab, setTab }) => {
               </svg>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
               Your Cart is Empty
             </h2>
             <p className="text-gray-500 max-w-md">
@@ -52,7 +59,7 @@ const CartContainer = ({ cartItems, setCartItems, tab, setTab }) => {
             </div>
             <button
               className="btn font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA]  w-full text-white rounded-full"
-              onClick={() => setCartItems([])}
+              onClick={handleCheckOut}
             >
               Proceed To Checkout
             </button>

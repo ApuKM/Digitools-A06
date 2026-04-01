@@ -1,7 +1,7 @@
 import React from "react";
 import cartIcon from "/products/shopping-cart.png";
 
-const Navbar = ({ cartItems }) => {
+const Navbar = ({ cartItems, setTab }) => {
   return (
     <div className="sticky top-0 z-50">
       <div className="navbar bg-base-100 shadow-sm px-10 ">
@@ -78,7 +78,7 @@ const Navbar = ({ cartItems }) => {
           </ul>
         </div>
         <div className="navbar-end gap-2">
-          <div className="relative cursor-pointer">
+          <div className="relative cursor-pointer" onClick={() => setTab("cart")}>
             <img src={cartIcon} alt="CartIcon" className="w-6 h-6" />
 
             <span className="absolute -top-3 -right-3 bg-purple-600 text-white text-xs font-bold rounded-full min-w-4.5 h-4.5 flex items-center justify-center px-1">

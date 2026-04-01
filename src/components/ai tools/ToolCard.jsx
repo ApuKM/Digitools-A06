@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const ToolCard = ({ data, cartItems, setCartItems }) => {
   const [buyAction, setBuyAction] = useState(false);
@@ -7,11 +8,16 @@ const ToolCard = ({ data, cartItems, setCartItems }) => {
   const handleCartItem = (data) => {
     const isExist = cartItems.some((item) => item.id === id);
     if (isExist) {
-      alert("Product already in cart");
+      toast("Product already on cart!", {
+        autoClose: 3000,
+      });
       return;
     }
     setCartItems([...cartItems, data]);
     setBuyAction(true);
+    toast(`${name} added to cart.`, {
+      autoClose: 3000,
+    });
   };
   return (
     <div className="hover:-translate-y-1  transition-all duration-200">
