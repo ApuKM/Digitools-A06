@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="hero-content flex-col lg:flex-row-reverse justify-between gap-8 w-full ">
           <img
             src={banner}
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="w-full object-contain object-center md:max-w-sm rounded-lg shadow-2xl "
           />
           <div>
             <div className="bg-base-300 inline-flex items-center py-1 px-2 rounded-full">
@@ -20,7 +20,7 @@ const Banner = () => {
                 New: AI-Powered Tools Available
               </span>
             </div>
-            <h1 className="text-5xl font-extrabold leading-18 text-[#101727]/90 my-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold md:leading-18 text-[#101727]/90 my-4">
               Supercharge Your <br /> Digital Workflow
             </h1>
             <p className="my-8 text-[#627382] leading-5 text-lg max-w-xl">

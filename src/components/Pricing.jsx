@@ -55,7 +55,7 @@ const Pricing = () => {
     <div className="mt-14 md:mt-20">
       <div className="w-[90%] max-w-7xl mx-auto ">
         <div className="flex flex-col items-center gap-4">
-          <h2 className="text-[#101727] text-[40px] font-extrabold ">
+          <h2 className="text-[#101727] text-3xl md:text-[40px] font-extrabold ">
             Simple, Transparent Pricing
           </h2>
           <p className="text-[#627382] leading-5 ">

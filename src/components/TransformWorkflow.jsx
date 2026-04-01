@@ -4,7 +4,7 @@ const TransformWorkflow = () => {
   return (
     <div className="mt-14 md:mt-20 flex items-center justify-center bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-20">
       <div className="space-y-6">
-        <h1 className="text-white text-4xl font-extrabold text-center">
+        <h1 className="text-white text-[28px] md:text-4xl font-extrabold text-center">
           Ready to Transform Your Workflow?
         </h1>
         <p className="text-white/90 leading-6 text-center">
